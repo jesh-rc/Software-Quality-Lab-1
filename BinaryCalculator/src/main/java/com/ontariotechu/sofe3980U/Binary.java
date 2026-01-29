@@ -54,7 +54,7 @@ public class Binary
     }
 
     /**
-     * Adding two binary variables. For more information, visit <a href="https://www.wikihow.com/Add-Binary-Numbers"> Add-Binary-Numbers </a>.
+     * Adding two binary variables.
      *
      * @param num1 The first addend object
      * @param num2 The second addend object
