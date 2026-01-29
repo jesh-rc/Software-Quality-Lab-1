@@ -9,7 +9,7 @@ import org.junit.Test;
  */
 public class BinaryTest 
 {
-    // --- existing constructor and add tests (unchanged) ---
+    // --- existing constructor and add tests ---
     @Test
     public void normalConstructor() { Binary binary = new Binary("1001001"); assertTrue(binary.getValue().equals("1001001")); }
 
@@ -43,7 +43,7 @@ public class BinaryTest
     @Test
     public void add5() { Binary binary1 = new Binary("0"); Binary binary2 = new Binary("0"); Binary binary3 = Binary.add(binary1, binary2); assertTrue(binary3.getValue().equals("0")); }
 
-    // --- NEW TESTS FOR OR, AND, MULTIPLY ---
+    // --- Test cases for OR, AND, and MULTIPLY ---
     
     @Test
     public void testOr() {
@@ -69,7 +69,6 @@ public class BinaryTest
         assertTrue(result.getValue().equals("1111"));
     }
 
-    // Extra tests for OR, AND, and Multiply with zeros
     @Test
     public void testOrWithZero() {
         Binary a = new Binary("10101");
