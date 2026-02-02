@@ -63,9 +63,9 @@ public class BinaryTest
 
     @Test
     public void testMultiply() {
-        Binary a = new Binary("101"); // 5
-        Binary b = new Binary("11");  // 3
-        Binary result = a.multiply(b); // 5 * 3 = 15 => 1111
+        Binary a = new Binary("101"); 
+        Binary b = new Binary("11");  
+        Binary result = a.multiply(b); 
         assertTrue(result.getValue().equals("1111"));
     }
 
@@ -88,5 +88,29 @@ public class BinaryTest
         Binary a = new Binary("10101");
         Binary b = new Binary("0");
         assertTrue(a.multiply(b).getValue().equals("0"));
+    }
+
+    @Test
+    public void testOrDifferentLengths() {
+        Binary a = new Binary("101");
+        Binary b = new Binary("11011");
+        Binary result = a.or(b);
+        assertTrue(result.getValue().equals("11111"));
+    }
+
+    @Test
+    public void testAndDifferentLengths() {
+        Binary a = new Binary("101");
+        Binary b = new Binary("11011");
+        Binary result = a.and(b);
+        assertTrue(result.getValue().equals("1"));
+    }
+
+    @Test
+    public void testMultiplyByOne() {
+        Binary a = new Binary("1011"); 
+        Binary b = new Binary("1");    
+        Binary result = a.multiply(b);
+        assertTrue(result.getValue().equals("1011"));
     }
 }
